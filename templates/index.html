@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container-fluid">
+   <div class="row column_title">
+      <div class="col-md-12">
+         <div class="page_title">
+            <h2>Dashboard</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row column1">
+      <div class="col-md-6 col-lg-3">
+         <div class="full counter_section margin_bottom_30">
+            <div class="couter_icon">
+               <div> 
+                  <i class="fa fa-user yellow_color"></i>
+               </div>
+            </div>
+            <div class="counter_no">
+               <div>
+                  <p class="total_no">3</p>
+                  <p class="head_couter">User</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+         <div class="full counter_section margin_bottom_30">
+            <div class="couter_icon">
+               <div> 
+                  <i class="fa fa-cloud-download green_color"></i>
+               </div>
+            </div>
+            <div class="counter_no">
+               <div>
+                  <p class="total_no">11</p>
+                  <p class="head_couter">Questions</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+         <div class="full counter_section margin_bottom_30">
+            <div class="couter_icon">
+               <div> 
+                  <i class="fa fa-comments-o red_color"></i>
+               </div>
+            </div>
+            <div class="counter_no">
+               <div>
+                  <p class="total_no">7</p>
+                  <p class="head_couter">Answer by GPT</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+ 
+  
+   <div class="row column4 graph">
+      <div class="col-md-12">
+         <h2>User Details</h2>
+         <table class="table table-bordered mt-5">
+
+            
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Orgnization</th>
+                <th scope="col">Question Asked By User</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Harsh</td>
+                <td>harsh@gmail.com</td>
+                <td>9999239444</td>
+                <td>Cloud Analogy</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Test</td>
+                <td>Test@gmail.com</td>
+                <td>8127112543</td>
+                <td>CloudA</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td >Anurag</td>
+                <td >anurag.shr@cloudanalogyu.com</td>
+                <td>9559384335</td>
+                <td>CA</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+   </div>
+     <!-- graph -->
+     <div class="row column2 graph margin_bottom_30">
+      <div class="col-md-l2 col-lg-12">
+         <div class="white_shd full">
+            <div class="full graph_head">
+               <div class="heading1 margin_0">
+                  <h2>Extra Area Chart</h2>
+               </div>
+            </div>
+            <div class="full graph_revenue">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="content">
+                        <div class="area_chart">
+                           <canvas height="120" id="canvas"></canvas>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end graph -->
+</div>
+
+{% endblock %}

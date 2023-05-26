@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Reportdesk</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- site icon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/png" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <!-- site css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" />
+    <!-- site css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
+    
+
+    <!-- color css -->
+
+    <!-- select bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-select.css') }}" />
+    <!-- scrollbar css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfect-scrollbar.css') }}" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+</head>
+
+<body class="dashboard dashboard_1">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar-header">
+                        <div class="logo_section">
+                            <a href="index.html"><img class="logo_icon img-responsive"
+                                    src="https://unrivaled-lolly-d33360.netlify.app/static/media/logo_tr3.55b07347.png"
+                                    alt="#" /></a>
+                        </div>
+
+                    </div>
+                    <div class="sidebar_user_info">
+
+                        <div class="user_profle_side">
+
+                            <div class="user_infonew">
+                                <button type="button" class="btn btn-outline-secondary "
+                                    style="width:250px;height:60px;font-size:16px;color:white;">New Prompt</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2">
+                    <h4>Searched History</h4>
+                    <ul class="list-unstyled components" id="questionappend">
+
+                        <!-- <li><a href="#"> <span>Who is M S Dhoni</span></a></li> -->
+
+                    </ul>
+                </div>
+
+                <div class="bottom" style="position:absolute; bottom:2px">
+                    <div class="sidebar_blog_2">
+                        <h4>Settings</h4>
+                        <ul class="list-unstyled components">
+
+                            </li>
+
+                            <li><a href="#"> <span>Import Question</span></a>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+                    <div class="sidebar_blog_1">
+                        <div class="sidebar-header">
+                            <div class="logo_section">
+                                <a href="index.html"><img class="logo_icon img-responsive"
+                                        src="{{ url_for('static', filename='images/logo/logo_icon.png') }}"
+                                        alt="#" /></a>
+                            </div>
+                        </div>
+                        <div class="sidebar_user_info">
+                            <div class="icon_setting"></div>
+                            <div class="user_profle_side">
+                                <div class="user_img"><img class="img-responsive"
+                                        src="{{ url_for('static', filename='images/layout_img/newuser.png') }}"
+                                        alt="#" /></div>
+                                <div class="user_info">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i
+                                    class="fa fa-bars"></i></button>
+                            <div class="logo_section">
+                                <a href="index.html"><img class="img-responsive"
+                                        src="https://unrivaled-lolly-d33360.netlify.app/static/media/logo_tr3.55b07347.png "
+                                        alt="#" /></a>
+                            </div>
+                            <div class="chatheading">
+                                <p class="headmail">ReportDesk AI For Health Care</p>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- end topbar -->
+                <!-- dashboard inner -->
+                <div class="midde_cont ">
+
+                    {% block body %} {% endblock %}
+
+                    <!-- footer -->
+                    <div class="container-fluid">
+
+                        
+                        <div class="wrapper">
+                            <div class="title-text">
+                                <div class="title login">Login Form</div>
+                                <div class="title signup">Signup Form</div>
+                            </div>
+                            <div class="form-container">
+                                <div class="slide-controls">
+                                    <input type="radio" name="slide" id="login" checked>
+                                    <input type="radio" name="slide" id="signup">
+                                    <label for="login" class="slide login">Login</label>
+                                    <label for="signup" class="slide signup">Signup</label>
+                                    <div class="slider-tab"></div>
+                                </div>
+                                <div class="form-inner">
+                                    <form class="login">
+                                        <div class="field">
+                                            <input type="text" placeholder="Email Address" id="signinemail" required>
+                                        </div>
+                                        <div class="field">
+                                            <input type="password" placeholder="Password" id="signinpassword" required>
+                                        </div>
+                                        <div class="pass-link"><a href="#">Forgot password?</a></div>
+                                        <div class="field btn">
+                                            <div class="btn-layer"></div>
+                                            <input type="submit" value="Login" id="signinformsubmit">
+                                        </div>
+
+                                        <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+                                    </form>
+                                    <form class="signup">
+                                        <div class="field">
+                                            <input type="text" placeholder="Name" id="signupname" required>
+                                        </div>
+                                        <div class="field">
+                                            <input type="phone" placeholder="Phone No." id="signupphone" required>
+                                        </div>
+                                        <div class="field">
+
+                                            <input type="text" placeholder="Email Address" id="signupemail" required>
+                                        </div>
+                                        <div class="field">
+
+                                            <input type="text" placeholder="Orgnization" id="Orgnization" required>
+                                        </div>
+                                        <div class="field">
+                                            <input type="password" placeholder="Password" id="signuppassword" required>
+                                        </div>
+                                        <div class="field btn">
+                                            <div class="btn-layer"></div>
+                                            <input type="submit" value="Signup" id="signupformsubmit">
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat" id="gptbody">
+
+                        </div>
+                        <div class=" searchquestion" style="bottom: 2%;position: absolute;width: 89%;">
+                            <form>
+                                <div class="form-group searchfooter">
+                                    <input type="eamil" hidden id="userprofileid" value=" ">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                        placeholder="search your question here"></textarea><button id="searchq"
+                                        type="button" class="btn btn-dark searchbutton"><i class="fa fa-paper-plane "
+                                            style="color:black;" aria-hidden="true"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- wow animation -->
+    <script src="{{ url_for('static', filename='js/animate.js') }}"></script>
+    <!-- select country -->
+    <script src="{{ url_for('static', filename='js/bootstrap-select.js') }}"></script>
+    <!-- owl carousel -->
+    <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+    <!-- chart js -->
+    <script src="{{ url_for('static', filename='js/Chart.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/Chart.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/analyser.js') }}"></script>
+    <!-- nice scrollbar -->
+    <script src="{{ url_for('static', filename='js/perfect-scrollbar.min.js') }}"></script>
+    <script>
+        var ps = new PerfectScrollbar('#sidebar');
+    </script>
+    <!-- custom js -->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatgpt.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chart_custom_style1.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+
+</html>
