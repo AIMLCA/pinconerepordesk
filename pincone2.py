@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from langchain.embeddings.openai import OpenAIEmbeddings
 
 
-directory = '/home/ca/pincone/pdf_data'
+directory = '/pdf_data'
 
 def load_docs(directory):
   loader = DirectoryLoader(directory)
